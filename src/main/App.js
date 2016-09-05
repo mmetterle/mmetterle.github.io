@@ -10,7 +10,7 @@ import ContactListPage from '../datalists/ContactsList'
 export default class App extends Component {
 	render() {
 		return (
-			<Router history={browserHistory}>
+			<Router history={hashHistory}>
 				<Route name="base" path="/" component={BaseLayout}>
 					<IndexRoute component={LoginPage} />
 					<Route name="login" path="/login" component={LoginPage}/>

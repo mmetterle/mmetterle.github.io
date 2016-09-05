@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import { Router, Route, Link, browserHistory, hashHistory, IndexRoute  } from 'react-router';
 import { Form, FormGroup, Checkbox, ControlLabel, ButtonToolbar, FormControl, Button, Input } from 'react-bootstrap';
 
 import FieldGroup from "../common/FieldGroup";
@@ -76,7 +76,7 @@ export default class LoginForm extends Component {
 	  
 		console.log(e);
 		
-		browserHistory.replace('/home');
+		hashHistory.replace('/home');
 		
 		// use this for browser history
 		//browserHistory.push('/about');
