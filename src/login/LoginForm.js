@@ -76,7 +76,7 @@ export default class LoginForm extends Component {
 	  
 		console.log(e);
 		
-		browserHistory.push('/about');
+		browserHistory.replace('/home');
 		
 		// use this for browser history
 		//browserHistory.push('/about');

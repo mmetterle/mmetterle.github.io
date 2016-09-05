@@ -14,6 +14,7 @@ export default class App extends Component {
 				<Route name="base" path="/" component={BaseLayout}>
 					<IndexRoute component={LoginPage} />
 					<Route name="login" path="/login" component={LoginPage}/>
+					<Route name="home" path="/home" component={About}/>
 					<Route path="/about" component={DashboardLayout}>	
 						<IndexRoute component={DashboardHomePage} />
 						<Route path="/contactList" component={ContactListPage} />
