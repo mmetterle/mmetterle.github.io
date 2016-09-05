@@ -16,7 +16,6 @@ export default class App extends Component {
 					<Route name="login" path="/login" component={LoginPage}/>
 					<Route path="/about" component={DashboardLayout}>	
 						<IndexRoute component={DashboardHomePage} />
-						<Route path="/home" component={DashboardHomePage}/>
 						<Route path="/contactList" component={ContactListPage} />
 					</Route>
 				</Route>
