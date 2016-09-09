@@ -11,7 +11,9 @@ export default class StatWidgetComponent extends React.Component {
 			<Panel bsStyle="primary"
 				header={<div className="row">
 							<div className="col-xs-9 text-right">
-								<div>{this.props.headerText}</div>
+								<Link to={this.props.linkTo}>
+									<span>{this.props.headerText}</span>
+								</Link>
 								<div>{this.props.count}</div>								
 							</div>
 						</div>}>					

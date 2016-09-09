@@ -18,29 +18,32 @@ export default class TableComponent extends Component {
 	render() {
 	
 		var rows = [];
-		var idx = 0;
+		var columns = [];
 		
-		this.props.rows.forEach(function(row) {
-			
-			rows.push(
+		this.props.rows.map(function(row){
+			rows.push(	
 				<tr key={row.name} role="row">
 					<td><InputCheckbox checked={false}/></td>
-					<td><a href="#">{row.name}</a></td>
-					<td>{row.type}</td>
-					<td>{row.status}</td>
-				</tr>	  
-			)		
-			idx++;
-		}.bind(this));
+					<td className="col-lg-3 col-md-6"><a href="#">{row.name}</a></td>
+					<td className="col-lg-3 col-md-6">{row.type}</td>
+					<td className="col-lg-3 col-md-6">{row.status}</td>
+					<td className="col-lg-3 col-md-6">{row.activeDate}</td>
+				</tr>	 
+			)                     
+		}.bind(this));	
+		
+		this.props.columns.map(function(column){
+			columns.push(	
+				<th key={column.tableIndex} className={column.classname} tabIndex={column.tableIndex} aria-controls={column.ariaControls} colSpan={column.colspan} rowSpan={column.rowspan} style={{ width: 265 }}>{column.label}</th>
+			)                     
+		}.bind(this));	
 	
 		return (
 			<Table responsive striped bordered condensed hover role="grid">
 				<thead>
 					<tr role="row">
 						<th rowSpan="1" colSpan="1" style={ {width: 50} } ><InputCheckbox checked={false}/></th>
-						<th className="sorting_asc" tabIndex="0" aria-controls="dataTables-example" rowSpan="1" colSpan="1" aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style={ {width: 265} }>Contact</th>
-						<th className="sorting" tabIndex="0" aria-controls="dataTables-example" rowSpan="1" colSpan="1" aria-label="Browser: activate to sort column ascending" style={ {width: 321} }>Type</th>
-						<th className="sorting" tabIndex="0" aria-controls="dataTables-example" rowSpan="1" colSpan="1" aria-label="Platform(s): activate to sort column ascending" style={ {width: 299} }>Status</th>
+							{columns}
 					</tr>
 				</thead>
 				<tbody>{rows}</tbody>

@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
-import { Router, Route, Link, IndexRoute, IndexLink, hashHistory, browserHistory } from 'react-router'
+import React, { Component } from 'react';
+import { Router, Route, Link, IndexRoute, IndexLink, hashHistory, browserHistory } from 'react-router';
 import LoginPage from '../login/LoginForm';
-import AppHistory from './AppHistory'
-import BaseLayout from '../Dashboard/BaseLayout'
+import AppHistory from './AppHistory';
+import BaseLayout from '../Dashboard/BaseLayout';
 import DashboardLayout from '../Dashboard/DashboardLayout';
 import DashboardHomePage from '../Dashboard/DashboardHome';
-import ContactListPage from '../datalists/ContactsList'
+import ContactListPage from '../datalists/ContactsList';
+import DonorListPage from '../datalists/DonorsList';
+import ConnectorListPage from '../datalists/ConnectorsList';
+import LeadListPage from '../datalists/LeadsList';
 
 export default class App extends Component {
 	render() {
@@ -17,6 +20,9 @@ export default class App extends Component {
 					<Route path="/home" component={DashboardLayout}>	
 						<IndexRoute component={DashboardHomePage} />
 						<Route path="/contactList" component={ContactListPage} />
+						<Route path="/donorList" component={DonorListPage} />
+						<Route path="/connectorList" component={ConnectorListPage} />
+						<Route path="/leadList" component={LeadListPage} />
 					</Route>
 				</Route>
 			</Router>
