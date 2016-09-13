@@ -4,7 +4,7 @@
 - Dashboard view
 - Table views, forms and navbar views
 
-## [Demo](https://mmetterle.github.io/) - Click link here to view demo
+## [Demo](https://mmetterle.github.io/) - Click here to view demo
 
 ## Roadmap
 
