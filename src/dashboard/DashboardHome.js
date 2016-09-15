@@ -54,7 +54,7 @@ export default class Home extends Component {
 							<StatWidget style="primary"
 								count="12"
 								headerText="Task List" 
-								linkTo="#"
+								linkTo="/taskList"
 							/>   
 						</div>
 						<div className="col-lg-3 col-md-6">

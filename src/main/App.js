@@ -9,6 +9,7 @@ import ContactListPage from '../datalists/ContactsList';
 import DonorListPage from '../datalists/DonorsList';
 import ConnectorListPage from '../datalists/ConnectorsList';
 import LeadListPage from '../datalists/LeadsList';
+import TaskListPage from '../datalists/TaskList';
 
 export default class App extends Component {
 	render() {
@@ -23,6 +24,7 @@ export default class App extends Component {
 						<Route path="/donorList" component={DonorListPage} />
 						<Route path="/connectorList" component={ConnectorListPage} />
 						<Route path="/leadList" component={LeadListPage} />
+						<Route path="/taskList" component={TaskListPage} />
 					</Route>
 				</Route>
 			</Router>
