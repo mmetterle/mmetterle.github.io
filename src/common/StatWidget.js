@@ -21,11 +21,3 @@ export default class StatWidgetComponent extends React.Component {
 		)
 	}
 }
-
-
-
-
-
-
-
-							

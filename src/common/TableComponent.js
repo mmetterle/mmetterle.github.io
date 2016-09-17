@@ -24,10 +24,10 @@ export default class TableComponent extends Component {
 			rows.push(	
 				<tr key={row.name} role="row">
 					<td><InputCheckbox checked={false}/></td>
-					<td className="col-lg-3 col-md-6"><a href="#">{row.name}</a></td>
-					<td className="col-lg-3 col-md-6">{row.type}</td>
-					<td className="col-lg-3 col-md-6">{row.status}</td>
-					<td className="col-lg-3 col-md-6">{row.activeDate}</td>
+					<td><a href="#">{row.name}</a></td>
+					<td>{row.type}</td>
+					<td>{row.status}</td>
+					<td>{row.activeDate}</td>
 				</tr>	 
 			)                     
 		}.bind(this));	
@@ -39,7 +39,7 @@ export default class TableComponent extends Component {
 		}.bind(this));	
 	
 		return (
-			<Table responsive striped bordered condensed hover role="grid">
+			<table responsive striped bordered condensed hover role="grid">
 				<thead>
 					<tr role="row">
 						<th rowSpan="1" colSpan="1" style={ {width: 50} } ><InputCheckbox checked={false}/></th>
@@ -47,7 +47,7 @@ export default class TableComponent extends Component {
 					</tr>
 				</thead>
 				<tbody>{rows}</tbody>
-			</Table>
+			</table>
 		)
 	}
 }

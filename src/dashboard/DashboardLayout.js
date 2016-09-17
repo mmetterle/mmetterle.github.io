@@ -55,7 +55,7 @@ export default class DashboardLayout extends Component {
 								<MenuItem eventKey={1.2}>
 									Settings
 								</MenuItem> 
-								<MenuItem divider />							
+								<MenuItem divider />
 								<LinkContainer to="/login">
 									<MenuItem eventKey={1.3}>Logout</MenuItem>    
 								</LinkContainer>  
